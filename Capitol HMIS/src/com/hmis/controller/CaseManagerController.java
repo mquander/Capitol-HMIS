@@ -86,7 +86,7 @@ public class CaseManagerController extends HttpServlet {
 					
 				}else {
 					caseManagerRepository.updateEmp(updateAttribute, updateValue, updateCaseManager);
-					page = "http://localhost:8080/Capitol_HMIS";
+					page = "index.html"; //http://localhost:8080/Capitol_HMIS
 					
 				}
 			
@@ -107,7 +107,7 @@ public class CaseManagerController extends HttpServlet {
 						request.getParameter("phone"), 
 						request.getParameter("shelter"));
 				
-				page = "http://localhost:8080/Capitol_HMIS";
+				page = "index.html"; //http://localhost:8080/Capitol_HMIS
 				
 			}else {
 				page = "content/insertError.jsp";

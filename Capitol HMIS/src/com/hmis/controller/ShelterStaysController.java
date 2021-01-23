@@ -127,7 +127,7 @@ public class ShelterStaysController extends HttpServlet {
 					
 				}else {
 					shelterStaysRepository.update(updateAttribute, updateValue, SSNforUpdate, shelterNumforUpdate, startDateforUpdate);
-					page = "http://localhost:8080/Capitol_HMIS";
+					page = "index.html"; //http://localhost:8080/Capitol_HMIS
 				}
 					
 			}else {
@@ -141,7 +141,7 @@ public class ShelterStaysController extends HttpServlet {
 						insertShelterNum,
 						insertStartDate, 
 						insertEndDate);
-				page = "http://localhost:8080/Capitol_HMIS";
+				page = "index.html"; //http://localhost:8080/Capitol_HMIS
 				
 			}else {
 				

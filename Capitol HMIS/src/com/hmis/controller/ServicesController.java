@@ -108,7 +108,7 @@ public class ServicesController extends HttpServlet{
 					
 				}else {
 					servicesRepository.updateService(SSNforUpdate, empIDforUpdate, serviceDateforUpdate, updateAttribute, updateValue);
-					page = "http://localhost:8080/Capitol_HMIS";
+					page = "index.html"; //http://localhost:8080/Capitol_HMIS
 				}
 					
 			}else {
@@ -125,7 +125,7 @@ public class ServicesController extends HttpServlet{
 						request.getParameter("serviceProvided"), 
 						request.getParameter("serviceMatchGoals"), 
 						request.getParameter("serviceNotes"));
-				page = "http://localhost:8080/Capitol_HMIS";
+				page = "index.html"; //http://localhost:8080/Capitol_HMIS
 				
 			}else {
 				page = "content/insertError.jsp";

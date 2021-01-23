@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 @SuppressWarnings("serial")
 public class HomeServlet extends HttpServlet {
 	
-	public boolean stringIsInt(String str) {
+	public boolean stringIsInt(String str) { 
 		boolean returnValue;
 		int intValue;
 		  try {

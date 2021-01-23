@@ -98,7 +98,7 @@ public class ShelterController extends HttpServlet {
 			if(home.stringIsInt(updateShelter)) { // valid input
 				
 				shelterRepository.updateShelter(updateAttribute, updateValue, updateShelter);
-				page = "http://localhost:8080/Capitol_HMIS";
+				page = "index.html"; //http://localhost:8080/Capitol_HMIS
 				
 			}else { // invalid input
 				page = "content/updateError.jsp";
@@ -109,7 +109,7 @@ public class ShelterController extends HttpServlet {
 			if(home.stringIsInt(insertshelterNum)){ // valid input
 				
 				shelterRepository.insertShelter(insertshelterNum, insertShelterName, insertShelterAddress);
-				page = "http://localhost:8080/Capitol_HMIS";
+				page = "index.html"; //http://localhost:8080/Capitol_HMIS
 				
 			}else { // invalid input
 				page = "content/insertError.jsp";

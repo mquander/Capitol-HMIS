@@ -97,7 +97,7 @@ public class ClientController extends HttpServlet{
 				  }else {
 					  
 					  clientRepository.update(updateAttribute, updateValue, updateClient);
-					  page = "http://localhost:8080/Capitol_HMIS";
+					  page = "index.html"; //http://localhost:8080/Capitol_HMIS
 				  }
 				  
 			  }else {
@@ -127,7 +127,7 @@ public class ClientController extends HttpServlet{
 		              spdatScore,
 		              isVet);
 				  
-				  page = "http://localhost:8080/Capitol_HMIS";
+				  page = "index.html"; //http://localhost:8080/Capitol_HMIS
 			  }else {
 				  page = "content/insertError.jsp";
 			  }
