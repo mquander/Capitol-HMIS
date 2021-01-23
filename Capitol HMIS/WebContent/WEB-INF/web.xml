@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>Capitol HMIS</display-name>
+  
+  <welcome-file-list>
+  	<welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
+   <servlet>
+  	<servlet-name>clientJDBCServlet</servlet-name>
+  	<servlet-class>com.hmis.controller.ClientController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>clientJDBCServlet</servlet-name>
+  	<url-pattern>/ClientController</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>HomeServlet</servlet-name>
+  	<servlet-class>com.hmis.HomeServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>HomeServlet</servlet-name>
+  	<url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>clientSearchServlet</servlet-name>
+  	<servlet-class>com.hmis.controller.ClientController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>clientSearchServlet</servlet-name>
+  	<url-pattern>/searchClientSSN</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>clientSearchLname</servlet-name>
+  	<servlet-class>com.hmis.controller.ClientController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>clientSearchLname</servlet-name>
+  	<url-pattern>/searchClientLname</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>clientSearchVets</servlet-name>
+  	<servlet-class>com.hmis.controller.ClientController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>clientSearchVets</servlet-name>
+  	<url-pattern>/searchClientVetStatus</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>clientSearchAge</servlet-name>
+  	<servlet-class>com.hmis.controller.ClientController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>clientSearchAge</servlet-name>
+  	<url-pattern>/searchClientByAge</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>insertNewClient</servlet-name>
+  	<servlet-class>com.hmis.controller.ClientController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>insertNewClient</servlet-name>
+  	<url-pattern>/insertClient</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>displayClients</servlet-name>
+  	<servlet-class>com.hmis.controller.ClientController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>displayClients</servlet-name>
+  	<url-pattern>/displayAllClients</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>updateClient</servlet-name>
+  	<servlet-class>com.hmis.controller.ClientController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>updateClient</servlet-name>
+  	<url-pattern>/updateClient</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>searchEmpID</servlet-name>
+  	<servlet-class>com.hmis.controller.CaseManagerController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchEmpID</servlet-name>
+  	<url-pattern>/searchEmpID</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>searchEmpLname</servlet-name>
+  	<servlet-class>com.hmis.controller.CaseManagerController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchEmpLname</servlet-name>
+  	<url-pattern>/searchEmpLname</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>displayAllEmployeesAtShelterNo</servlet-name>
+  	<servlet-class>com.hmis.controller.CaseManagerController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>displayAllEmployeesAtShelterNo</servlet-name>
+  	<url-pattern>/displayAllEmployeesAtShelterNo</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>displayAllEmployees</servlet-name>
+  	<servlet-class>com.hmis.controller.CaseManagerController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>displayAllEmployees</servlet-name>
+  	<url-pattern>/displayAllEmployees</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>insertCaseManager</servlet-name>
+  	<servlet-class>com.hmis.controller.CaseManagerController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>insertCaseManager</servlet-name>
+  	<url-pattern>/insertCaseManager</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>updateCaseManager</servlet-name>
+  	<servlet-class>com.hmis.controller.CaseManagerController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>updateCaseManager</servlet-name>
+  	<url-pattern>/updateCaseManager</url-pattern>
+  </servlet-mapping> 
+  
+  
+  <servlet>
+  	<servlet-name>searchShelterNum</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchShelterNum</servlet-name>
+  	<url-pattern>/searchShelterNum</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>searchShelterName</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchShelterName</servlet-name>
+  	<url-pattern>/searchShelterName</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>searchShelterAddress</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchShelterAddress</servlet-name>
+  	<url-pattern>/searchShelterAddress</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>displayAllShelters</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>displayAllShelters</servlet-name>
+  	<url-pattern>/displayAllShelters</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>insertShelter</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>insertShelter</servlet-name>
+  	<url-pattern>/insertShelter</url-pattern>
+  </servlet-mapping> 
+  
+  <servlet>
+  	<servlet-name>updateShelter</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>updateShelter</servlet-name>
+  	<url-pattern>/updateShelter</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>searchShelterStayInstance</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterStaysController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchShelterStayInstance</servlet-name>
+  	<url-pattern>/searchShelterStayInstance</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>searchShelterStayBySSN</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterStaysController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchShelterStayBySSN</servlet-name>
+  	<url-pattern>/searchShelterStayBySSN</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>searchShelterStayByShelterNum</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterStaysController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchShelterStayByShelterNum</servlet-name>
+  	<url-pattern>/searchShelterStayByShelterNum</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>searchShelterStayByDate</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterStaysController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchShelterStayByDate</servlet-name>
+  	<url-pattern>/searchShelterStayByDate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>displayAllShelterStays</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterStaysController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>displayAllShelterStays</servlet-name>
+  	<url-pattern>/displayAllShelterStays</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>insertShelterStay</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterStaysController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>insertShelterStay</servlet-name>
+  	<url-pattern>/insertShelterStay</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>updateShelterStays</servlet-name>
+  	<servlet-class>com.hmis.controller.ShelterStaysController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>updateShelterStays</servlet-name>
+  	<url-pattern>/updateShelterStays</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>searchServiceInstance</servlet-name>
+  	<servlet-class>com.hmis.controller.ServicesController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchServiceInstance</servlet-name>
+  	<url-pattern>/searchServiceInstance</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>searchServiceBySSN</servlet-name>
+  	<servlet-class>com.hmis.controller.ServicesController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchServiceBySSN</servlet-name>
+  	<url-pattern>/searchServiceBySSN</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>searchServiceByEmpID</servlet-name>
+  	<servlet-class>com.hmis.controller.ServicesController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchServiceByEmpID</servlet-name>
+  	<url-pattern>/searchServiceByEmpID</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>searchServiceByServiceDate</servlet-name>
+  	<servlet-class>com.hmis.controller.ServicesController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>searchServiceByServiceDate</servlet-name>
+  	<url-pattern>/searchServiceByServiceDate</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>displayAllServices</servlet-name>
+  	<servlet-class>com.hmis.controller.ServicesController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>displayAllServices</servlet-name>
+  	<url-pattern>/displayAllServices</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>insertService</servlet-name>
+  	<servlet-class>com.hmis.controller.ServicesController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>insertService</servlet-name>
+  	<url-pattern>/insertService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>updateService</servlet-name>
+  	<servlet-class>com.hmis.controller.ServicesController</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>updateService</servlet-name>
+  	<url-pattern>/updateService</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

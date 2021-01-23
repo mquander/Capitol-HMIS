@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="images/cHMISicon.ico">
+
+    <title>Capitol HMIS</title>
+
+    <!-- Bootstrap core CSS 
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet"> type="text/css"-->
+	<link href="css/bootstrap.min.css"  rel="stylesheet">
+	
+    <!-- Custom styles for this template 
+    <link href="dashboard.css" rel="stylesheet"> type="text/css"-->
+    <link href="css/dashboard.css"  rel="stylesheet">
+   <style>
+  		h1{text-align: center;}
+  		h5{text-align: center;}
+  		footer{
+  				text-align: center;
+  				padding: 3px;
+  				background-color: DarkSlateGray;
+  				color: white;
+		}
+  	</style>
+  
+  </head>
+
+  <body>
+ 
+    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" id="navbar">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#home">Capitol HMIS</a>
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap"></li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <!--<div class="row">-->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link" href="#home" target="_self">
+                  <span data-feather="home"></span>
+                  Home <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"  href="#clients" target="_self">
+                  <span data-feather="users"></span>
+                  Clients
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#casemanagers" target="_self">
+                  <span data-feather="users"></span>
+                  Case Managers
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#shelters" target="_self">
+                  <span data-feather="users"></span>
+                  Shelters
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#shelterstays" target="_self">
+                  <span data-feather="bar-chart-2"></span>
+                  Shelter Stays
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services" target="_self">
+                  <span data-feather="layers"></span>
+                  Services
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+				
+		<!--> BEGIN HOME TAB <-->
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-2" class="container">
+        
+			<div id="myTabContent" class="tab-content">
+				<section id="#home" class="section">
+					<div class="tab-pane fade active show" id="home">
+						<div class="container" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+							
+							<h1 class="p-2 my-2 bg-dark text-white">Home</h1>
+						<h5>A Homeless Management Information System solution in the Washington, D.C. area</h5><br>
+						<img src="images/icon.jpg" alt="CapitolHMISlogo" width="150" height="325" class="center"><br>
+						
+					  	<p class="ex2">
+						
+								Capitol HMIS seeks to provide an effective yet
+								simple database management system to
+								homeless shelters in Washington, D.C. and the
+								surrounding areas. By coordinating services
+								and information between shelters, Capitol
+								HMIS offers an organized approach to
+								homeless services.
+						</p>
+						
+						<p><strong>Advantages:</strong>
+							<ul>
+							  <li>Provides better reliability compared to existing systems</li>
+							  <li>Includes a sleek and understandable user interface</li>
+							</ul>
+						</p>
+						
+						<p><strong>Implemented Functions:</strong>
+							<ul>
+							  <li>Search clients, case managers, shelter information, shelter stays, and services performed</li>
+							  <li>Insert a new client, a new shelter, a shelter stay occurrence, and services rendered</li>
+							</ul>
+						</p>
+						
+						<p class="ex1">
+							The software facilitates data access by searching uniquely identifying information,
+							such as a client’s SSN, an employee’s ID, a shelter’s number, or a combination of these attributes. In some 
+							instances, the user will be able to search clients and case managers by their last name. Capitol HMIS also has
+							the ability to insert new, and update existing, clients, shelters, shelter stay instances, and service instances 
+							based on the user’s input.	By using the Capitol HMIS database, case managers will be more equipped to handle 
+							the administrative	tasks of homeless services.
+						</p>
+					 	</div>
+						
+					</div><br>
+				</section>
+				
+				<section id="#clients" class="section">
+					<div class="tab-pane fade active show" id="clients">
+					 	<div class="container " class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+	
+							<h1 class="p-2 my-2 bg-dark text-white">Clients</h1>
+						</div>
+							<h2 class="h2">Search Clients</h2>
+							<form action="searchClientSSN" method="get">
+		    					<label class="card-title">SSN: </label>
+		    					<input type="search" name="searchSSN" id="searchSSN" required>
+		    					<input type="submit" value="Search"><br><br>
+		    				</form>
+		    				
+		    				<form action="searchClientLname" method="get">
+		    					<label class="card-title">Last Name: </label>
+		    					<input type="search" name="searchLname" id="searchLname" required>
+		    					<input type="submit" value="Search"><br><br>
+		    				</form>
+		    
+		    				<form action="searchClientVetStatus" method="get">
+		    					<label class="card-title">Veterans: </label>   &nbsp;
+		    					<input type="radio" id="vet" name="searchVets"value="T" id="searchVets" required> &nbsp;
+		    					<input type="submit" value="Search"><br><br>
+		    				</form>
+		    
+						    <form action="searchClientByAge" method="get">
+						    	<label class="card-title">Above Age: </label>
+						    	<input type="search" name="searchAge" id="searchByAge" required>
+						    	<input type="submit" value="Search"><br><br>
+						    </form>
+						    
+						    <form action="displayAllClients" method="get">
+						    	<label class="card-title">Display All Clients: </label> &nbsp;
+						    	<input type="radio" id="displayAll" name="displayAll" value="*" id="displayAll" required>  &nbsp;
+						    	<input type="submit" value="Search"><br><br>
+						    </form>
+						  
+						    
+					</div>
+						
+						<!-- INSERT CLIENT section begin -->
+						<!-- <div class="container" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">-->
+							<div class="table-responsive" id="insertClientTable">
+							<h2 class="headline">Insert a Client</h2>
+								<form action="insertClient" method="post">
+									<table id="insertClient" class="table table-striped table-sm">
+									  <tbody>
+										<tr>
+											<td>SSN<td><input type="text" id="SSN" name="SSN" maxlength="9" size="9" required><td><td>
+			                				<td>First Name<td><input type="text" id="fname" name="fname" size="9"><td><td>
+			                				<td>MI<td><input type="text" id="minit" name="minit" maxlength="1" size="2"><td><td>
+			                				<td>Last Name<td><input type="text" id="lname" name="lname" size ="9"><td><td>
+			                				<td>DOB<td><input type="date" id="DOB" name="DOB" maxlength="8" size ="5" style="font-size: .7rem"><td><td>
+			                				<td>Gender<td><select size="1" id="gender" name="gender">
+			                    				<option value="">
+			                        				
+			                   					</option><option value="Male">
+			                        				Male
+			                   					</option>
+			                    				<option value="Female">
+			                        				Female
+			                    				</option>
+			                    				<option value="TF">
+			                        				TF
+			                    				</option>
+			                    				<option value="TM">
+			                        				TM
+			                    				</option>
+			                    				<option value="NC">
+			                        				NC
+			                    				</option>
+					    						</select><td><td>
+					    				</tr>
+					    				<tr>		
+			                				<td>Primary Race<td><input type="text" id="PrimaryRace" name="PrimaryRace" maxlength="12" size="8"><td><td>
+			                				<td>Secondary Race<td><input type="text" id="SecondaryRace" name="SecondaryRace" maxlength="12" size="8"><td><td>
+			                				<td>Goals Date Added<td><input type="date" id="GoalsDateAdded" name="GoalsDateAdded" maxlength="8" size="5" style="font-size: .7rem"><td><td>
+			                				<td>Goal Notes<td><textarea id="GoalsNotes" name="GoalNotes" rows="3" cols="16"></textarea><td><td>
+			                				
+			                				<td>SPDAT Score (0-17)<td><input type="text" id="SPDATscore" name="SPDATscore" maxlength="2" size="2"><td><td>
+			                				<td>Veteran Status<td><select size="1" id="isVeteran" name="isVeteran">
+			                    				<option value="">
+			                        				
+			                   					</option><option value=T>
+			                        				T
+			                   					</option>
+			                    				<option value="F">
+			                        				F
+			                    				</option>
+					    						</select><td><td>
+										</tr>
+									  </tbody>
+									
+									</table>
+									<input type="submit" value="Submit"> &nbsp;
+									
+									</form><br>
+								</div>
+							
+								
+						<!-- INSERT CLIENT section end -->
+						
+						<!--<div class="container" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom"> -->
+							<h2 class="headline">Update Existing Client</h2>
+							
+							<form action="updateClient" method="post">
+								<label class="card-title">Client SSN to Update: </label>   &nbsp;
+								<input type="text" id="updateSSN" name="updateSSN" maxlength="9" size="9" required> &nbsp;
+								
+								<label class="card-title">Attribute to Update: </label>  &nbsp;
+								<select size="1" id="updateAttribute" name="updateAttribute" id="updateAttribute" required>
+			                    				<option value="">
+			                        				
+			                   					</option>
+			                    				<option value="Fname">
+			                        				First Name
+			                   					</option>
+			                    				<option value="Minit">
+			                        				Middle Initial
+			                    				</option>
+			                    				<option value="Lname">
+			                        				Last Name
+			                    				</option>
+			                    				<option value="DOB">
+			                        				DOB
+			                    				</option>
+			                    				<option value="Gender">
+			                        				Gender
+			                    				</option>
+			                    				<option value="Primary_Race">
+			                        				Primary Race
+			                    				</option>
+			                    				<option value="Secondary_Race">
+			                        				Secondary Race
+			                    				</option>
+			                    				<option value="Goals_dateAdded">
+			                        				Goals Date Added
+			                    				</option>
+			                    				<option value="Goal_Notes">
+			                        				Goals Notes
+			                    				</option>
+			                    				<option value="SPDAT_score">
+			                        				SPDAT score
+			                    				</option>
+			                    				<option value="Is_Veteran">
+			                        				Veteran Status
+			                    				</option>
+					    						</select> &nbsp;
+										<label class="card-title">Update Value: </label>   &nbsp;
+										<input type="text" id="updateValue" name="updateValue" id="updateValue" size="10"> (dates must be entered yyyy-mm-dd)<br>
+								<input type="submit" value="Submit">
+								
+								<br><br><br>
+							</form>
+						<!--  </div>-->
+					</div>
+				</section>
+								
+				
+				<section id="#casemanagers" class="section">
+					<div class="tab-pane fade active show" id="casemanagers">
+						<div class="container" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom" id="#casemanagers">
+							<h1 class="p-2 my-2 bg-dark text-white">Case Managers</h1><br>
+						</div>
+						<!-- SEARCH EMP BEGIN -->
+						
+						<h3 class="h3">Search Case Managers</h3>
+						
+						<form action="searchEmpID" method="get">
+		    				<label class="card-title">Employee ID: </label>
+		    				<input type="search" name="searchEmpID" id="searchEmpID" required>
+		    				<input type="submit" value="Search"><br><br>
+		    			</form>
+		    				
+		    			<form action="searchEmpLname" method="get">
+		    				<label class="card-title">Last Name: </label>
+		    				<input type="search" name="searchEmpLname" id="searchEmpLname" required>
+		    				<input type="submit" value="Search"><br><br>
+		    			</form>
+		    			
+		    			<form action="displayAllEmployeesAtShelterNo" method="get">
+						    <label class="card-title">Display All Case Managers at Shelter No: </label> 
+						    <input type="search" name="displayAllEmployeesAtShelterNo" id="displayAllEmployeesAtShelterNo" required>
+						    <input type="submit" value="Search"><br><br>
+						</form>
+		    			
+		    			<form action="displayAllEmployees" method="get">
+						    	<label class="card-title">Display All Case Managers: </label> &nbsp;
+						    	<input type="radio" id="displayAllEmployees" name="displayAllEmployees" value="*" required>  &nbsp;
+						    	<input type="submit" value="Search"><br><br>
+						</form>
+						
+						<!-- SEARCH EMP END -->
+						
+						<!-- INSERT EMP BEGIN -->
+						<div class="table-responsive" id="#insertCaseManagerTable">
+							<h3 class="h3">Insert Case Manager</h3>
+							<form action="insertCaseManager" method="post">
+								<table id="insertCaseManager" class="table table-striped table-sm">
+								  <tbody>
+										<tr>
+											<td>Employee ID: <td><input type="text" id="EmployeeID" name="EmpID" maxlength="4" size="4" required><td><td>
+			                				<td>First Name: <td><input type="text" id="fname5" name="fname" size="10"><td><td>
+			                				<td>MI: <td><input type="text" id="minit5" name="minit" maxlength="1" size="2"><td><td>
+			                				<td>Last Name: <td><input type="text" id="lname5" name="lname" size ="10"><td><td>
+			                				<td>Phone Number: <td><input type="text" id="phone" name="phone" maxlength="10" size="10"><td><td>
+					    					<td>Shelter: <td><input type="text" id="shelter" name="shelter" maxlength="3" size="3"><td><td>
+					    				</tr>
+									  </tbody>
+								</table>
+								<input type="submit" value="Submit"> &nbsp;
+								
+							</form><br>
+						</div>
+						<!-- INSERT EMP END -->
+						
+						<!-- UPDATE EMP BEGIN -->
+						<h3 class="h3">Update Case Manager Info</h3>
+						<form action="updateCaseManager" method="post">
+							<label class="card-title">Case Manager ID to Update: </label>   &nbsp;
+								<input type="text" id="updateEmp" name="updateEmpID" maxlength="4" size="4" required> &nbsp;
+								
+								<label class="card-title">Attribute to Update: </label>  &nbsp;
+								<select size="1" id="updateAttribute" name="updateAttribute" required>
+			                    				<option value="">
+			                        				
+			                   					</option>
+			                   					<option value="Fname">
+			                        				First Name
+			                   					</option>
+			                    				<option value="Minit">
+			                        				Middle Initial
+			                    				</option>
+			                    				<option value="Lname">
+			                        				Last Name
+			                    				</option>
+			                    				<option value="Phone_No">
+			                        				Phone Number
+			                    				</option>
+			                    				<option value="Main_Shelter_No">
+			                        				Shelter
+			                    				</option>
+			                    				
+					    						</select> &nbsp;
+										<label class="card-title">Update Value: </label>   &nbsp;
+										<input type="text" id="updateValue" name="updateValue" size="10"> <br>
+								<input type="submit" value="Submit"><br><br>
+						</form>
+						<!-- UPDATE EMP END -->
+						
+							<br>
+					</div>
+				</section>
+				
+				
+				<section id="#shelters" class="section">
+					<div class="tab-pane fade active show" id="shelters">
+						<div class="container" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+							<h1 class="p-2 my-2 bg-dark text-white">Shelters</h1>
+						</div>
+						
+						<h3 class="h3">Search Shelters</h3>
+						<!-- SEARCH SHELTER BEGIN -->
+						<form action="searchShelterNum" method="get">
+		    					<label class="card-title">Shelter Number: </label>
+		    					<input type="search" name="searchShelterNum" required>
+		    					<input type="submit" value="Search"><br><br>
+		    			</form>
+		    			
+		    			<form action="searchShelterName" method="get">
+		    					<label class="card-title">Shelter Name: </label>
+		    					<input type="search" name="searchShelterName" required>
+		    					<input type="submit" value="Search"><br><br>
+		    			</form>
+		    			
+		    			<form action="searchShelterAddress" method="get">
+		    					<label class="card-title">Shelter Address: </label>
+		    					<input type="search" name="searchShelterAddress" required>
+		    					<input type="submit" value="Search"><br><br>
+		    			</form>
+		    			
+		    			<form action="displayAllShelters" method="get">
+						    	<label class="card-title">Display All Shelters: </label> &nbsp;
+						    	<input type="radio" id="displayAllShelters" name="displayAllShelters" value="*" required>  &nbsp;
+						    	<input type="submit" value="Search"><br><br>
+						</form>
+						<!-- SEARCH SHELTER END -->
+						
+						<!-- INSERT SHELTER BEGIN -->
+						<div class="table-responsive" id="#insertShelterTable">
+						<h3 class="h3">Insert Shelter</h3>
+							<form action="insertShelter" method="post">
+								<table id="insertShelter" class="table table-striped table-sm">
+								  <tbody>
+										<tr>
+											<td>Shelter Number: <td><input type="text" id="shelterNum" name="shelterNum" maxlength="4" size="4" required><td><td>
+			                				<td>Shelter Name: <td><input type="text" id="shelterName" name="shelterName" size="18"><td><td>
+			                				<td>Shelter Address: <td><input type="text" id="shelterAddress" name="shelterAddress" size="20"><td><td>			                				
+					    				</tr>
+									  </tbody>
+								</table>
+								<input type="submit" value="Submit">
+							</form><br>
+						</div>
+						<!-- INSERT SHELTER END -->	
+						
+						<!-- UPDATE SHELTER BEGIN -->
+						<h3 class="h3">Update Shelter Info</h3>
+						<form action="updateShelter" method="post">
+							<label class="card-title">Shelter Number to Update: </label>   &nbsp;
+								<input type="text" id="updateShelter" name="updateShelter" maxlength="3" size="3" required> &nbsp;
+								
+								<label class="card-title">Attribute to Update: </label>  &nbsp;
+								<select size="1" id="updateAttribute" name="updateAttribute" required>
+			                    				<option value="">
+			                        				
+			                   					</option>
+			                   					<option value="Shelter_No">
+			                        				Shelter Number
+			                   					</option>
+			                    				<option value="Shelter_name">
+			                        				Shelter Name
+			                   					</option>
+			                    				<option value="Address">
+			                        				Shelter Address
+			                    				</option>
+			                    							                    				
+					    						</select> &nbsp;
+										<label class="card-title">Update Value: </label>   &nbsp;
+										<input type="text" id="updateValue" name="updateValue" size="12"> <br>
+								<input type="submit" value="Submit"><br><br><br>
+						</form>
+						<!-- UPDATE SHELTER END -->
+						
+					</div> 
+				</section>
+				
+				<section id="#shelterstays" class="section">
+					<div class="tab-pane fade active show" id="shelterstays">
+						<div class="container" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+							<h1 class="p-2 my-2 bg-dark text-white">Shelter Stays</h1>
+						</div>
+						<h3 class="h3">Search Shelter Stays</h3>
+						<!-- SEARCH SHELTER STAYS BEGIN -->
+						<form action="searchShelterStayInstance" method="get" class="border">
+						<h6 class="h6">Search by Shelter Stay Instance</h6>
+		    				<label class="card-title">Client SSN: </label>
+		    				<input type="search" name="searchClientSSN" required> &nbsp;
+		    				
+		    				<label class="card-title">Shelter Number: </label>
+		    				<input type="search" name="searchShelterNum" required> &nbsp;
+		    				
+		    				<label class="card-title">Start Date: </label>
+		    				<input type="date" name="searchStartDate" required> &nbsp;
+		    				
+		    				<input type="submit" value="Search"><br>
+		    			</form ><br>
+		    				
+		    			<form action="searchShelterStayBySSN">
+		    				<label class="card-title">Client SSN: </label>
+		    				<input type="search" name="searchShelterStayBySSN" required>  &nbsp;
+		    				<input type="submit" value="Search"><br><br>
+		    			</form>
+		    			
+		    			<form action="searchShelterStayByShelterNum">
+		    				<label class="card-title">Shelter Number: </label>
+		    				<input type="search" name="searchShelterStayByShelterNum" required> &nbsp;
+		    				<input type="submit" value="Search"><br><br>
+		    			</form>
+		    			
+		    			<form action="searchShelterStayByDate">
+		    				<label class="card-title">Start Date: </label> &nbsp;
+		    				<input type="date" name="searchShelterStayByStartDate" required> &nbsp;
+		    				<input type="submit" value="Search"><br><br>
+		    			</form>
+		    			
+		    			<form action="displayAllShelterStays" method="get">
+						    <label class="card-title">Display All Shelter Stays: </label> &nbsp;
+						    <input type="radio" id="displayAllShelterStays" name="displayAllShelterStays" value="*" required>  &nbsp;
+						    <input type="submit" value="Search"><br><br>
+						</form>
+						<!-- SEARCH SHELTER STAYS END -->
+						
+						<!-- INSERT SHELTER STAYS BEGIN -->
+						<div class="table-responsive" id="#shelterstays">
+						<h3 class="h3">Insert Shelter Stay Instance</h3>
+						
+						<form action="insertShelterStay" method="post">
+							<table id="insertShelterStay" class="table table-striped table-sm">
+							  <tbody>
+								
+								<tr>
+									<td>SSN: <td><input type="text" id="SSN" name="SSN" maxlength="9" size="9" required><td><td>
+									<td>Shelter Number: <td><input type="text" id="shelterNumber" name="shelterNumber" maxlength="3" size="3" required><td><td>
+			                		<td>Start Date: <td><input type="date" id="startDate" name="startDate" size="8" required><td><td>
+			                		<td>End Date: <td><input type="date" id="endDate" name="endDate" size="8"><td><td>	
+								</tr>
+								
+							  </tbody>
+							</table>
+							<input type="submit" value="Submit"><br>
+							</form>
+						</div>
+							<br>	
+						<!-- INSERT SHELTER STAYS END -->
+						
+						<!-- UPDATE SHELTER STAYS BEGIN -->
+						<h3 class="h3">Update Shelter Stay Information</h3>
+						<form action="updateShelterStays" method="post">
+							<label class="card-title">SSN of Shelter Stay: </label>   &nbsp;
+							<input type="text" id="SSNforUpdate" name="SSNforUpdate" maxlength="9" size="9" required> &nbsp;
+							
+							<label class="card-title">Shelter Number of Shelter Stay: </label>   &nbsp;
+							<input type="text" id="shelterNumforUpdate" name="shelterNumforUpdate" maxlength="9" size="9" required> &nbsp;
+							
+							<label class="card-title">Start Date of Shelter Stay: </label>   &nbsp;
+							<input type="date" id="startDateforUpdate" name="startDateforUpdate" required> &nbsp;
+								
+								<label class="card-title">Attribute to Update: </label>  &nbsp;
+								<select size="1" id="updateAttribute" name="updateAttribute" required>
+			                    				<option value="">
+			                        				
+			                   					</option>
+			                   					<option value="Client_SSN">
+			                        				Client SSN
+			                   					</option>
+			                    				<option value="Shelter_No">
+			                        				Shelter Number
+			                   					</option>
+			                    				<option value="Start_Date">
+			                        				Start Date
+			                    				</option>
+			                    				<option value="End_Date">
+			                        				End Date
+			                    				</option>
+			                    							                    				
+					    						</select> <br><br>
+										<label class="card-title">Update Value: </label>   &nbsp;
+								<input type="text" id="updateValue" name="updateValue" size="12"> (dates must be entered yyyy-mm-dd) <br>
+								<input type="submit" value="Submit"><br><br><br>
+						</form>
+						<!-- UPDATE SHELTER STAYS END -->
+					</div>
+				</section>
+				
+				
+				<section id="#services" class="section">
+					<div class="tab-pane fade active show" id="services">
+						<div class="container" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+							<h1 class="p-2 my-2 bg-dark text-white">Services</h1>
+						</div>
+						
+						<h3 class="h3">Search Services</h3>
+						<!-- SEARCH SERVICES BEGIN -->
+						<form action="searchServiceInstance" method="get" class="border">
+						<h6 class="h6">Search by Service Instance</h6>
+		    				<label class="card-title">Client SSN: </label>
+		    				<input type="search" name="SSNforService" required> &nbsp;
+		    				
+		    				<label class="card-title">Employee ID: </label>
+		    				<input type="search" name="EmpIDforService" required> &nbsp;
+		    				
+		    				<label class="card-title">Service Date: </label>
+		    				<input type="date" name="searchServiceDate" required> &nbsp;
+		    				
+		    				<input type="submit" value="Search"><br>
+		    			</form><br>
+		    			
+		    			<form action="searchServiceBySSN" method="get">
+		    				<label class="card-title">Client SSN: </label>
+		    				<input type="search" name="searchServiceBySSN" required>
+		    				<input type="submit" value="Search"><br><br>
+		    			</form>
+		    			
+		    			<form action="searchServiceByEmpID" method="get">
+		    				<label class="card-title">Employee ID: </label>
+		    				<input type="search" name="searchServiceByEmpID" required>
+		    				<input type="submit" value="Search"><br><br>
+		    			</form>
+		    			
+		    			<form action="searchServiceByServiceDate" method="get">
+		    				<label class="card-title">Service Date: </label>
+		    				<input type="date" name="searchServiceByServiceDate" required>
+		    				<input type="submit" value="Search"><br><br>
+		    			</form>
+		    			
+		    			<form action="displayAllServices" method="get">
+						    <label class="card-title">Display All Services: </label> &nbsp;
+						    <input type="radio" id="displayAllServices" name="displayAllServices" value="*" required>  &nbsp;
+						    <input type="submit" value="Search"><br><br>
+						</form>
+						<!-- SEARCH SERVICES END -->
+						
+						<!-- INSERT SERVICES BEGIN -->
+						<div class="table-responsive" id="#services">
+						<h3 class="h3">Insert Service</h3>
+						<form action="insertService" method="post">
+							<table id="insertService" class="table table-striped table-sm">
+							  <tbody>
+								<tr>
+									<td>SSN: <td><input type="text" id="SSN" name="SSN" maxlength="9" size="9" required><td><td>
+									<td>Employee ID: <td><input type="text" id="empID" name="empID" maxlength="4" size="4" required><td><td>
+			                		<td>Service Date: <td><input type="date" id="serviceDate" name="serviceDate" size="8" style="font-size: .7rem"><td><td>
+			                		<td>Service Provided: <td><input type="text" id="serviceProvided" name="serviceProvided" size="12"><td><td>
+			                		<td>Service Matches Goals (T/F): <td>
+			                		<select size="1" id="serviceMatchGoals" name="serviceMatchGoals">
+			                    				<option value="">
+			                        				
+			                   					</option>
+			                    				<option value=T>
+			                        				T
+			                   					</option>
+			                    				<option value="F">
+			                        				F
+			                    				</option>
+					    						</select><td><td>
+			                		<td><td>
+			                		<td>Notes: <td><textarea id="serviceNotes" name="serviceNotes" rows="3" cols="24"></textarea><td><td>
+			                		
+								</tr>
+							  </tbody>
+							</table>
+							 <input type="submit" value="Submit"><br>
+							
+							</form>
+					  </div>
+					  <!-- INSERT SERVICES END -->
+					<br>
+					<!-- UPDATE SERVICES BEGIN -->	
+					<h3 class="h3">Update Service Info</h3>
+					<form action="updateService" method="post">
+					
+						<label class="card-title">SSN of Service: </label>   &nbsp;
+							<input type="text" id="SSNforUpdate" name="SSNforUpdate" maxlength="9" size="9" required> &nbsp;
+							
+							<label class="card-title">Employee ID of Service: </label>   &nbsp;
+							<input type="text" id="empIDforUpdate" name="empIDforUpdate" maxlength="4" size="4" required> &nbsp;
+							
+							<label class="card-title">Service Date: </label>   &nbsp;
+							<input type="date" id="serviceDateforUpdate" name="serviceDateforUpdate" size="8" required> &nbsp;
+					
+					
+					
+					<label class="card-title">Attribute to Update: </label>
+							<select size="1" id="updateAttribute" name="updateAttribute" required>
+			                    				<option value="">
+			                        				
+			                   					</option>
+			                   					<option value="Service_Date">
+			                        				Service Date
+			                   					</option>
+			                   					<option value="Service_Provided">
+			                        				Service Provided
+			                   					</option>
+			                    				<option value="Service_Matches_Goal">
+			                        				Service Matches Goal
+			                   					</option>
+			                    				<option value="Notes">
+			                        				Notes
+			                    				</option>                    				
+					    						</select><br><br>
+					   <label class="card-title">Update Value: </label>   &nbsp;
+						<input type="text" id="updateValue" name="updateValue" size="12"> (dates must be entered yyyy-mm-dd) <br>
+						<input type="submit" value="Submit"><br><br>
+						
+					</form>
+					<!-- UPDATE SERVICES END -->	
+					</div>
+				</section>				
+				<footer>
+  					&copy; Copyright 2021 Capitol HMIS
+  				</footer>
+			</div>
+			
+		</main> 
+		
+		
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../../../dist/js/bootstrap.min.js"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    
+  </body>
+  
+</html>
