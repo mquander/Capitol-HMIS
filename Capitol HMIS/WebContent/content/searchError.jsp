@@ -22,7 +22,7 @@
 </head>
 <body>
 	<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" id="navbar">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="http://localhost:8080/Capitol_HMIS">Capitol HMIS</a>
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="index.html">Capitol HMIS</a>
       
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap"></li>
@@ -31,7 +31,7 @@
     
     <div class="container-fluid">
     	<nav class="col-md-2 d-none d-md-block bg-light sidebar">
-        	<div class="sidebar-sticky">
+        	<div class="sidebar-sticky"><br><br><br>
           		<h5 class="h5">Click Back to Return to Home Page</h5>
     	
     		</div>
